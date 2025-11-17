@@ -3,6 +3,7 @@
     displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
 >
     <Page
         id="page"
@@ -13,42 +14,57 @@
             headerText="{i18n>exercise_1}"
             expandable="true"
         >
-            <Button
-                class="btnHello"
-                id="helloWorldButton"
-                text="{i18n>txt}"
-            />
-            <Button
-                class="btnHello"
-                id="hideButton"
-                text="{i18n>btnHideTxt}"
-                icon="sap-icon://hide"
-                press="onPress"
-            />
-            <Button
-                class="btnHello"
-                id="showButton"
-                text="{i18n>btnShowTxt}"
-                icon="sap-icon://show"
-                press="onPress"
-            />
             <content>
-                <Input class="inputText"
+			<l:VerticalLayout >
+			<l:HorizontalLayout >
+                <Button
+                    class="btnHello"
+                    id="helloWorldButton"
+                    text="{i18n>txt}"
+                />
+                <Button
+                    class="btnHello"
+                    id="hideButton"
+                    text="{i18n>btnHideTxt}"
+                    icon="sap-icon://hide"
+                />
+                <Button
+                    class="btnHello"
+                    id="showButton"
+                    text="{i18n>btnShowTxt}"
+                    icon="sap-icon://show"
+                />
+			</l:HorizontalLayout>
+			<l:HorizontalLayout >
+                <Input
+                    class="inputText"
                     value=""
                     id="input_0"
-                    width="30%"
                 />
-                <Input class="inputText"
+                <Input
+                    class="inputText"
                     value="{/value}"
                     id="input_1"
-                    width="30%"
                 />
-                <Input class="inputText"
+                <Input
+                    class="inputText"
                     value="{data>/value}"
                     id="input_2"
-                    width="30%"
                 />
+			</l:HorizontalLayout>
+			</l:VerticalLayout>
             </content>
         </Panel>
+		<Panel 
+			id="panel_1"
+			headerText="{i18n>exercise_2}"
+			expandable="true"
+			expanded="true"
+		>
+		<l:VerticalLayout >
+			<Image id="image_0" src="https://i.ytimg.com/vi/m-wbguWlt9w/maxresdefault.jpg" width="400px"/>
+			<Button id="imageButton" class="btnHello" text="{i18n>btnHideTxt}" icon="sap-icon://hide"/>
+		</l:VerticalLayout>
+		</Panel>
     </Page>
 </mvc:View>
