@@ -5,6 +5,17 @@
     xmlns="sap.m"
 	xmlns:l="sap.ui.layout"
 >
+
+	<Dialog id="dialog_0" closeOnNavigation="true" draggable="true" title="{i18n>dialogHeaderTxt}" titleAlignment="Center" contentWidth="300px">
+
+			<Text id="dialogText" class="dialogText" text="" wrapping="true"/>
+
+
+		<endButton>
+			<Button id="dialogCloseButton" class="btnHello" text="Close"/>
+		</endButton>
+	</Dialog>
+
     <Page
         id="page"
         title="{i18n>title}"
@@ -15,8 +26,8 @@
             expandable="true"
         >
             <content>
-			<l:VerticalLayout >
-			<l:HorizontalLayout >
+			<l:VerticalLayout id="verticalLayout_0">
+			<l:HorizontalLayout id="horizontalLayout_0">
                 <Button
                     class="btnHello"
                     id="helloWorldButton"
@@ -35,7 +46,7 @@
                     icon="sap-icon://show"
                 />
 			</l:HorizontalLayout>
-			<l:HorizontalLayout >
+			<l:HorizontalLayout  id="horizontalLayout_1">
                 <Input
                     class="inputText"
                     value=""
@@ -59,12 +70,21 @@
 			id="panel_1"
 			headerText="{i18n>exercise_2}"
 			expandable="true"
-			expanded="true"
 		>
-		<l:VerticalLayout >
+		<l:VerticalLayout id="verticalLayout_1">
 			<Image id="image_0" src="https://i.ytimg.com/vi/m-wbguWlt9w/maxresdefault.jpg" width="400px"/>
 			<Button id="imageButton" class="btnHello" text="{i18n>btnHideTxt}" icon="sap-icon://hide"/>
 		</l:VerticalLayout>
+		</Panel>
+		<Panel id="panel_2"
+			headerText="{i18n>exercise_3}"
+			expandable="true"
+			expanded="true">
+			<l:VerticalLayout id="verticalLayout_2">
+				<Button id="openDialogButton" text="{i18n>openDialogButtonTxt}"/>
+				<Input id="dialogTextInput" value="Hello Marlene!" />
+			</l:VerticalLayout>
+
 		</Panel>
     </Page>
 </mvc:View>

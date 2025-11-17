@@ -1,0 +1,13 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
+    <l:VerticalLayout id="verticalLayout_HelloFragment" width="100%">
+        <l:HorizontalLayout id="horizontalLayout_HelloFragment_0" class="sapUiSmallMarginBegin sapUiSmallMarginEnd">
+            <Button id="button_HelloFragment_0" text="{i18n>txt}"/>
+            <Input id="input_HelloFragment_0" value=""/>
+        </l:HorizontalLayout>
+        
+        <l:HorizontalLayout id="horizontalLayout_HelloFragment_1">
+            <Input value="{/value}" id="input_HelloFragment_1" class="sapUiSmallMarginBegin sapUiSmallMarginEnd"/>
+            <Input value="{data>/value}" id="input_HelloFragment_2" class="sapUiSmallMarginBegin sapUiSmallMarginEnd"/>
+        </l:HorizontalLayout>
+    </l:VerticalLayout>
+</mvc:View>

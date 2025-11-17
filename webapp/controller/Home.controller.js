@@ -26,7 +26,6 @@ sap.ui.define([
 
             //text input recollection
             var input_0 = this.getView().byId("input_0")
-            console.log(input_0)
             var input_1 = this.getView().byId("input_1")
             var input_2 = this.getView().byId("input_2")
 
@@ -61,6 +60,22 @@ sap.ui.define([
                     imageButton.setIcon("sap-icon://hide")
                 }
             },this)
+
+            // EXERCISE 3
+            var button_openDialog = this.getView().byId("openDialogButton")
+            var dialogTextInput = this.getView().byId("dialogTextInput")
+            var dialog = this.getView().byId("dialog_0")
+            var dialogText = this.getView().byId("dialogText")
+            var dialogButton = this.getView().byId("dialogCloseButton")
+
+            button_openDialog.attachPress(function () {
+                dialogText.setText(dialogTextInput.getValue())
+                dialog.open()
+            },this)
+            
+            dialogButton.attachPress(function () {
+                dialog.close()
+            }, this)
         }
     });
 });
