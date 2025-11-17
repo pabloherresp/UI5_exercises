@@ -1,6 +1,54 @@
-<mvc:View controllerName="com.xtendhr.hello.controller.Home"
+<mvc:View
+    controllerName="com.xtendhr.hello.controller.Home"
+    displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <Panel
+            id="panel_0"
+            headerText="{i18n>exercise_1}"
+            expandable="true"
+        >
+            <Button
+                class="btnHello"
+                id="helloWorldButton"
+                text="{i18n>txt}"
+            />
+            <Button
+                class="btnHello"
+                id="hideButton"
+                text="{i18n>btnHideTxt}"
+                icon="sap-icon://hide"
+                press="onPress"
+            />
+            <Button
+                class="btnHello"
+                id="showButton"
+                text="{i18n>btnShowTxt}"
+                icon="sap-icon://show"
+                press="onPress"
+            />
+            <content>
+                <Input class="inputText"
+                    value=""
+                    id="input_0"
+                    width="30%"
+                />
+                <Input class="inputText"
+                    value="{/value}"
+                    id="input_1"
+                    width="30%"
+                />
+                <Input class="inputText"
+                    value="{data>/value}"
+                    id="input_2"
+                    width="30%"
+                />
+            </content>
+        </Panel>
     </Page>
 </mvc:View>
